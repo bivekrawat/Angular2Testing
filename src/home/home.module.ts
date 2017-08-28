@@ -1,22 +1,22 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
-import { LoginService } from './login.service';
+import { HomeComponent } from './home.component';
+import { HomeService } from './home.service';
 
 /* ...other imports... */
 
 @NgModule({
   imports: [CommonModule],
   declarations: [
-    LoginComponent
+    HomeComponent
   ],
-  exports: [LoginComponent]
+  exports: [HomeComponent]
 })
-export class LoginModule {
+export class HomeModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: LoginModule,
-      providers: [LoginService]
+      ngModule: HomeModule,
+      providers: [HomeService]
     };
   }
 }
