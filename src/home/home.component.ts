@@ -6,4 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   // selector: 'app-root',
   templateUrl: './home.component.html'
 })
-export class HomeComponent {}
+
+export class HomeComponent {
+  token: string = localStorage.getItem('currentUser');
+}

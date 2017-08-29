@@ -7,6 +7,9 @@ import { HomeComponent } from '../home/home.component';
 
 import { routing } from './app.routing';
 import { LoginComponent } from '../login/login.component';
+import { LoginService } from '../login/login.service';
+import { Http, HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +19,10 @@ import { LoginComponent } from '../login/login.component';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
